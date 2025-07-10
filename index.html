@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebP to JPG Converter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script
+        src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="https://www.linkedin.com/in/b-p-aryaan" target="_blank">Aryaan</a></div>
+            <ul class="nav-links">
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="converter" class="converter section">
+        <div class="container">
+            <span class="section-subtitle">WebP to JPG</span>
+            <h2 class="section-title">Image Converter</h2>
+            <div id="drop-zone" class="drop-zone glass-card">
+                <div class="drop-zone-text">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & drop your WebP files here</p>
+                    <span>or</span>
+                    <button id="browse-btn" class="btn">Browse Files</button>
+                </div>
+                <input type="file" id="file-input" multiple accept="image/webp" style="display: none;">
+                <div class="quality-slider">
+                    <label for="quality">JPG Quality: <span id="quality-value">90</span>%</label>
+                    <input type="range" id="quality" min="0" max="100" value="90">
+                </div>
+            </div>
+            <div id="loader" class="loader" style="display: none;"></div>
+            <div id="preview-container" class="preview-container"></div>
+            <div id="action-buttons" class="action-buttons" style="display: none;">
+                <button id="download-zip-btn" class="btn">Download All as ZIP</button>
+                <button id="clear-btn" class="btn btn-outline">Clear All</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; B P ARYAAN 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
