@@ -62,6 +62,9 @@ WebP-converter/
 
 ## Screenshots 📷
 
+![landing page](ss/a1.png)
+
+![landing page](ss/a2.png)
 
 ## Troubleshooting 🛑
 
